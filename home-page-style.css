@@ -1,0 +1,145 @@
+html {
+    background: rgb(255, 217, 179);
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    height: 45vh;
+    background: url(plymouth-dusk.jpg) bottom center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #4d1f00;    
+    font-size: 100px;
+    text-shadow: 10px 10px 0 rgba(110, 56, 4, 0.336);
+    font-family: Helvetica;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50px;
+    top: -35px;   
+}
+
+.toggleNav {
+    display: none;
+  }
+
+nav {       
+    background: black;
+    top: 0;
+    width: 100%;
+    transition:all 0.5s;
+    position: relative;
+    z-index: 1;    
+}
+
+body.fixed-nav nav {
+    position: fixed;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+  }
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a {
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    color: rgb(255, 217, 179);
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 70px auto;
+    background: white;
+    padding: 40px;
+    text-align: justify;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+    transform: scale(0.98);
+    transition: transform 0.5s;
+  }
+
+  /*
+  Footer
+  */
+   .footWrapper {
+       max-width: 900px;
+       background: rgb(255, 255, 255, 0.2);
+       padding: 10px;
+       margin: 70px auto;  
+   }
+
+   .contact {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .contact li {                 
+        padding-left: 10px;
+        padding-right: 10px;                       
+        list-style-type: none;
+        font-family: Arial, Helvetica, sans-serif; 
+        opacity: 0.7;    
+        height: auto;
+   }   
+  
+
+  
+  /*
+  Mobile layout
+  */
+
+ @media all and (max-width:500px) {
+
+    .flexNav li {
+        flex-basis: 100%
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }     
+    .flexNav ul.open{
+        display: flex;
+        flex-direction: column;  
+        align-items: flex-start;                   
+    }
+
+    .flexNav ul {
+        display: none;
+    }
+
+    .toggleNav {
+        display: block;
+    }
+    
+    h1 {
+        font-size: 50px;
+        top: 0px;
+    }
+    
+ }   
